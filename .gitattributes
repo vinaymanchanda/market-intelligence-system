@@ -1,1 +1,7 @@
+# Scraped data, rotated logs and generated Plotly dashboards are build
+# artifacts, not source. Without this, Linguist reports this repository as
+# 99% HTML rather than the Python it actually is.
 
+data/**            linguist-generated=true
+logs/**            linguist-generated=true
+__pycache__/**     linguist-generated=true
