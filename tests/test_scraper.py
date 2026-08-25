@@ -3,7 +3,7 @@ from datetime import datetime
 from pathlib import Path
 import sys
 
-sys.path.append(str(Path(file).resolve().parents / "src"))
+sys.path.append(str(Path(__file__).resolve().parents[1] / "src"))
 from data_collection.rate_limiter import RateLimiter
 from analysis.sentiment_analyzer import SentimentAnalyzer
 from data_processing.text_cleaner import TextCleaner
@@ -31,5 +31,5 @@ class TestBasics(unittest.TestCase):
         self.assertNotIn("https://", out)
 
 
-if name == "main":
+if __name__ == "__main__":
     unittest.main()
